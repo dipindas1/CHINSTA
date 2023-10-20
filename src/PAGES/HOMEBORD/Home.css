@@ -1,0 +1,15 @@
+/* CSS for screens narrower than a certain width (e.g., tablet and phone sizes) */
+@media (max-width: 768px) {
+    .content-wrapper {
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100; 
+    }

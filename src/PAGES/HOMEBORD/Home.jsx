@@ -8,6 +8,9 @@ import {
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
+  InstagramFilled,
+  BellOutlined,
+
 } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 import NotificationBar from '../../COMPONENT/SIDEBARS/RIGHTSIDEBAR/NotificationBar';
@@ -94,28 +97,22 @@ const Home = () => {
             // position:'fixed',
           }}
         /> */}
-
-<Header className="header ">
-    <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]} className="full-menu">
-{/*           
-          <Menu.Item key="1" icon={ }>
-           
-          </Menu.Item>
-          <Menu.Item key="2" icon={<SearchOutlined />}>
-          
-          </Menu.Item>
-          <Menu.Item key="5" icon={<PlusCircleFilled />}>
-          </Menu.Item>
-          <Menu.Item key="3" icon={<CompassOutlined />}>
-            
-          </Menu.Item>
-          <Menu.Item key="4" icon={<BellOutlined />}>
-          </Menu.Item> */}
-          <Menu.Item>helloo</Menu.Item>
-          
-          
+  <Header className="header">
+      <div className="header-left">
+        <div className="logo">
+          <InstagramFilled style={{ fontSize: "20px", color: "lightblue", marginRight: "1vh" }} />
+          <span style={{ color: "white", fontFamily: "fantasy", fontSize: "20px" }}>App name</span>
+        </div>
+      </div>
+      <div className="header-right">
+        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
+          <Menu.Item key={'1'}> <BellOutlined style={{  color: "lightblue",fontSize: "23px" }} />
+            </Menu.Item>
         </Menu>
-      </Header>
+      </div>
+    </Header>
+
+
         <Content
           style={{
             margin: '24px 16px 0',

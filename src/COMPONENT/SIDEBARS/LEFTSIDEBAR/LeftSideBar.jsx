@@ -7,6 +7,7 @@ import {
   BellOutlined,
   InstagramFilled,
   PlusCircleFilled,
+  MessageFilled,
 } from "@ant-design/icons";
 import "./LeftSidebar.css";
 import { Footer } from "antd/es/layout/layout";
@@ -76,7 +77,7 @@ function LeftSideBar() {
         }}
       >
         <div className="demo-logo-vertical" />
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={["4"]}>
+        <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
           <Menu.Item
             key="logo"
             style={{
@@ -109,8 +110,8 @@ function LeftSideBar() {
           <Menu.Item key="3" icon={<CompassOutlined />}>
             EXPLORE
           </Menu.Item>
-          <Menu.Item key="4" icon={<BellOutlined />}>
-            NOTIFICATION
+          <Menu.Item key="4" icon={<MessageFilled />}>
+            MESSAGE
           </Menu.Item>
           <Menu.Item key="5" icon={<PlusCircleFilled />}>
             POST

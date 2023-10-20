@@ -37,7 +37,7 @@
     height: 100%;
     padding: 0; /* Remove padding to fill the entire footer */
     display: flex;
-    justify-content: space-around; /* Optional: Center the menu items horizontally */
+    /* justify-content: space-around; Optional: Center the menu items horizontally */
     align-items: center; /* Optional: Center the menu items vertically */
   }
   .ant-layout-footer{

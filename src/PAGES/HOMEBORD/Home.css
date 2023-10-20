@@ -11,5 +11,43 @@
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 100; 
+        z-index: 10; 
     }
+
+    /* .logo {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-family: fantasy;
+        font-size: 20px;
+        float: left;
+      } */
+
+      .notification {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-family: fantasy;
+        font-size: 20px;
+        float: right;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #001529; 
+      }
+      
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      
+      
+     
+      .logo span {
+        color: white;
+        font-family: fantasy;
+        font-size: 20px;
+        margin-left: 8px;
+      }

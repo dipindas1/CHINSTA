@@ -119,7 +119,9 @@ const Home = () => {
             overflow: 'initial',
           }}
         >
+         
           <div
+          className='content'
             style={{
               padding: 24,
               textAlign: 'center',

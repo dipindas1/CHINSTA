@@ -1,12 +1,15 @@
 import './App.css';
-import LeftSideBar from './COMPONENT/SIDEBARS/LEFTSIDEBAR/LeftSideBar';
+import Login from './PAGES/AUTH/LOGIN/Login';
+import ProfilePic from './PAGES/AUTH/LOGIN/ProfilePic';
 import Home from './PAGES/HOMEBORD/Home';
 
 function App() {
   return (
  <>
- <Home/>
- {/* <LeftSideBar/> */}
+ {/* <Home/> */}
+ {/* <Login/> */}
+ <ProfilePic/>
+
  </>
   );
 }

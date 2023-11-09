@@ -11,11 +11,14 @@ import {
 } from "@ant-design/icons";
 import "./LeftSidebar.css";
 import { Footer } from "antd/es/layout/layout";
+import { useNavigate } from "react-router-dom";
+import Path from "../../../Route_Path/Route_Path";
 
 const { Sider } = Layout;
 
 
 function LeftSideBar() {
+  const navigate = useNavigate();
   const [isSidebarMinimized, setSidebarMinimized] = useState(false);
   console.log("isMinimized",isSidebarMinimized);
 
@@ -100,7 +103,10 @@ function LeftSideBar() {
           >
             App name
           </Menu.Item>
-          <Menu.Item key="1" icon={<HomeOutlined />}>
+          <Menu.Item key="1" icon={<HomeOutlined />} onClick={()=>{
+            console.log("hone click");
+            navigate(Path.DASH_HOME)
+          }} >
             HOME
           </Menu.Item>
 

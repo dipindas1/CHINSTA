@@ -16,6 +16,8 @@ import { Layout, Menu, theme } from 'antd';
 import NotificationBar from '../../COMPONENT/SIDEBARS/RIGHTSIDEBAR/NotificationBar';
 import LeftSideBar from '../../COMPONENT/SIDEBARS/LEFTSIDEBAR/LeftSideBar';
 import './Home.css'
+import { Outlet } from 'react-router-dom';
+import ProfilePic from '../AUTH/LOGIN/ProfilePic';
 const { Header, Content, Footer, Sider } = Layout;
 const items = [
   UserOutlined,
@@ -123,27 +125,16 @@ const Home = () => {
           <div
           className='content'
             style={{
-              padding: 24,
+              padding: 0,
               textAlign: 'center',
               background: colorBgContainer,
+              minHeight: '95vh'
             }}
           >
-            <p>long content</p>
-            {
-              // indicates very long content
-              Array.from(
-                {
-                  length: 100,
-                },
-                (_, index) => (
-                  <React.Fragment key={index}>
-                    {index % 20 === 0 && index ? 'more' : '...'}
-                    <br />
-                  </React.Fragment>
-                ),
-              )
-            }
+          <Outlet/>
+           
           </div>
+          {/* <ProfilePic/> */}
         </Content>
         <Footer
           style={{

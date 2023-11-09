@@ -3,7 +3,11 @@ import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";
 import { Button, Card, Form, Menu, message, Upload } from "antd";
 import { Header } from "antd/es/layout/layout";
 import { InstagramFilled, BellOutlined } from "@ant-design/icons";
+import "./Login.css";
+import { useNavigate } from "react-router-dom";
+import Path from "../../../Route_Path/Route_Path";
 const getBase64 = (img, callback) => {
+
   const reader = new FileReader();
   reader.addEventListener("load", () => callback(reader.result));
   reader.readAsDataURL(img);
@@ -20,6 +24,9 @@ const beforeUpload = (file) => {
   return isJpgOrPng && isLt2M;
 };
 const ProfilePic = () => {
+
+  const navigate = useNavigate();
+
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState();
   const handleChange = (info) => {
@@ -89,31 +96,35 @@ const ProfilePic = () => {
           backgroundColor: "",
         }}
       >
-        <div className="">
-          <Card className="shadow card-shadow" style={{ width: '80vh'}}>
-            <div className="col-12 justify-content-center d-flex align-items-center">
-              <h2>LOG IN</h2>
-            </div>
+          <div className="" style={{
+            // maxWidth: 00,
+            minWidth: 360
+          }}>
+            <Card className="shadow card-shadow">
+              <div className="col-12 justify-content-center d-flex align-items-center">
+                <h2>LOG IN</h2>
+              </div>
 
-            <Form
-              name="basic"
-              labelCol={{
-                span: 8,
-              }}
-              wrapperCol={{
-                span: 16,
-              }}
-              style={{
-                maxWidth: 600,
-              }}
-              initialValues={{
-                remember: true,
-              }}
-              // onFinish={onFinish}
-              // onFinishFailed={onFinishFailed}
-              autoComplete="off"
-            >
-              <Form.Item name="profile_picture">
+              <Form
+                name="basic"
+                labelCol={{
+                  span: 8,
+                }}
+                wrapperCol={{
+                  span: 16,
+                }}
+                style={{
+                  maxWidth: 600,
+                }}
+                initialValues={{
+                  remember: true,
+                }}
+                // onFinish={onFinish}
+                // onFinishFailed={onFinishFailed}
+                autoComplete="off"
+              >
+               
+               <Form.Item name="profile_picture">
                 <Upload
                   name="avatar"
                   listType="picture-circle"
@@ -136,27 +147,36 @@ const ProfilePic = () => {
                   )}
                 </Upload>
               </Form.Item>
-              <Form.Item
-              wrapperCol={{
-                offset: 4,
-                span: 16,
-              }}
-              >
-                <Button type="primary" htmlType="submit">
-                  Submit
-                </Button>
-              </Form.Item>
-            </Form>
-            {/* <div className="col-12  justify-content-center d-flex align-items-center">
-  <span
-  onClick={()=>{
-    console.log("go to sign up");
-    setSignUpStatus(true)
-  }}
-  >Sign Up?</span>
-  </div> */}
-          </Card>
-        </div>
+
+                <Form.Item
+                // wrapperCol={{
+                //   offset: 8,
+                //   span: 16,
+                // }}
+                >
+                  {/* <div className="" style={{ justifyContent:"end"}}> */}
+                  <Button type="primary" htmlType="submit" onClick={()=>{ navigate(Path.DASHBOARD)}}>
+                    Submit
+                  </Button>
+                  {/* </div> */}
+                </Form.Item>
+              </Form>
+              <div className="col-12  justify-content-center d-flex align-items-center">
+                {/* <span
+                  onClick={() => {
+                    console.log("go to sign up");
+                    setSignUpStatus(true);
+                  }}
+                >
+                  Sign Up?
+                </span> */}
+              </div>
+            </Card>
+          </div>
+        
+
+        
+      
       </div>
     </>
   );

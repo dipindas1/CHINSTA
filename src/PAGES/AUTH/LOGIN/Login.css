@@ -2,3 +2,41 @@
     background-color: azure;
     box-shadow: azure;
 }
+.ant-row {
+    /* text-align: center; */
+    justify-content: end;
+
+
+}
+.ant-col{
+    padding-left: 10%;
+}
+
+.log-background{
+    background-image: linear-gradient(
+        240deg,
+        hsl(228deg 19% 5%) 0%,
+        hsl(227deg 19% 6%) 16%,
+        hsl(226deg 19% 7%) 25%,
+        hsl(224deg 20% 8%) 32%,
+        hsl(223deg 20% 9%) 38%,
+        hsl(222deg 21% 10%) 43%,
+        hsl(221deg 21% 11%) 49%,
+        hsl(219deg 22% 12%) 55%,
+        hsl(218deg 22% 13%) 62%,
+        hsl(217deg 23% 13%) 69%,
+        hsl(216deg 23% 14%) 77%,
+        hsl(214deg 24% 15%) 87%,
+        hsl(213deg 24% 16%) 100%
+      );
+}
+.log-inner{
+  
+}
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  

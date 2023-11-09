@@ -39,6 +39,7 @@
     display: flex;
     /* justify-content: space-around; Optional: Center the menu items horizontally */
     align-items: center; /* Optional: Center the menu items vertically */
+    justify-content: center;
   }
   .ant-layout-footer{
     padding: 0;
